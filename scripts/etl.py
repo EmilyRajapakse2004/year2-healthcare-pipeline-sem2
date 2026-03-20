@@ -5,7 +5,7 @@ RAW_PATH = "data/processed/ingested_data.csv"
 PROCESSED_PATH = "data/processed/transformed_data.csv"
 
 def clean_transform():
-    print("🚀 STEP 2: ETL started...")
+    print(" STEP 2: ETL started...")
 
     df = pd.read_csv(RAW_PATH)
 
