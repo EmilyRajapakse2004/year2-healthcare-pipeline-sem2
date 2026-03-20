@@ -5,7 +5,7 @@ TRANSFORMED_PATH = "data/processed/transformed_data.csv"
 DB_PATH = "data/processed/healthcare.db"
 
 def load_to_db():
-    print("🚀 STEP 3: Loading to database...")
+    print(" STEP 3: Loading to database...")
 
     df = pd.read_csv(TRANSFORMED_PATH)
 
