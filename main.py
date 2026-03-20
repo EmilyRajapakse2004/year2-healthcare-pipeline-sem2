@@ -1,8 +1,9 @@
 from scripts.ingestion import ingest_data
 from scripts.etl import clean_transform
+from scripts.load_to_db import load_to_db
 
 def run_pipeline():
-    print("🚀 Starting Data Pipeline...\n")
+    print("🚀 Starting End-to-End Data Pipeline...\n")
 
     # Step 1: Ingestion
     df_raw = ingest_data()
@@ -10,7 +11,11 @@ def run_pipeline():
     # Step 2: ETL / Transformation
     df_transformed = clean_transform()
 
-    print("\nPipeline completed successfully!")
+    # Step 3: Load to Database
+    db_path = load_to_db()
+
+    print("\n Pipeline completed successfully!")
+    print(f"Data is now available at {db_path}")
 
 if __name__ == "__main__":
     run_pipeline()
