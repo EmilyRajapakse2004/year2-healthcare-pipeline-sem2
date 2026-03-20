@@ -12,12 +12,12 @@ def ingest_data():
     # Load raw data
     df = pd.read_csv(RAW_PATH)
 
-    print("✅ Data loaded successfully")
+    print(" Data loaded successfully")
     print("Shape:", df.shape)
 
     # Save a copy to processed layer
     df.to_csv(OUTPUT_FILE, index=False)
 
-    print(f"✅ Data saved to {OUTPUT_FILE}")
+    print(f" Data saved to {OUTPUT_FILE}")
 
     return df
